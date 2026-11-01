@@ -121,8 +121,9 @@ olist-sql-analysis/
 
 ## About
 
-**[TODO: Your Name]**
-Computer Science (Data Science) student
-[LinkedIn: TODO] · [GitHub: TODO] · [Email: TODO]
+Ajith B
+Computer Science (Data Science) Graduate
+[LinkedIn: www.linkedin.com/in/
+ajith-b-7549b2376] · [GitHub: https://github.com/zeusnub.] · [Email: ajithbalachandran911@gmail.com]
 
 *Dataset credit: Olist and the Kaggle community. Please check the dataset's license on Kaggle before reuse.*
