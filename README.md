@@ -1,10 +1,12 @@
-# Olist E-Commerce Analysis with SQL
+# Olist E-Commerce Analysis: SQL + Power BI Dashboard
 
-An end-to-end SQL analysis of the Brazilian **Olist** e-commerce marketplace: sales trends, customer behaviour, delivery performance, and customer satisfaction. 33 queries across 8 tables, from basic filtering to joins, CTEs and customer segmentation.
+An end-to-end analysis of the Brazilian **Olist** e-commerce marketplace: sales trends, customer behaviour, delivery performance, and customer satisfaction. 33 SQL queries across 8 tables (basic filtering to joins, CTEs and customer segmentation), followed by an interactive **Power BI dashboard**.
 
-> **Tools:** MySQL 8 · MySQL Workbench
+> **Tools:** MySQL 8 · MySQL Workbench · Power BI Desktop
 > **Dataset:** [Brazilian E-Commerce Public Dataset by Olist (Kaggle)](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce)
-> **Dashboard:** [TODO: add link, or remove this line]
+> **Live dashboard:** [View the Power BI dashboard](ADD_DASHBOARD_LINK_HERE)
+
+![Dashboard overview](images/dashboard_overview.png)
 
 ---
 
@@ -19,6 +21,27 @@ This project answers questions a marketplace business would actually ask:
 5. Do late deliveries lead to lower review scores?
 6. How many customers come back for a second order?
 7. Who are the most valuable customers?
+
+---
+
+## Power BI Dashboard
+
+The dashboard is built on the same MySQL database used for the SQL analysis, with four pages:
+
+| Page | What it shows | Based on |
+|---|---|---|
+| **Overview** | Total revenue, total orders, average order value, monthly revenue trend | Queries 15, 21, 27 |
+| **Products and Sellers** | Top categories and sellers by revenue, items sold, shipping cost | Queries 18, 19, 24, 30 |
+| **Delivery and Satisfaction** | Average delivery days by state, late delivery %, review score for late vs. on-time orders | Queries 28, 29, 32 |
+| **Customers** | Revenue by state, repeat-customer rate, customer value segments | Queries 20, 31, 33 |
+
+Filters (such as year and state) let you slice every page interactively.
+
+---
+
+## Key Findings
+
+- **Revenue trend (Query 27):** monthly revenue grew from about R$ 120K in January 2017 to a peak of about R$ 1.0M in November 2017 (+52% over October), then held at roughly R$ 850K-990K a month through mid-2018. January-August 2018 revenue was about 138% higher than the same months of 2017. Early 2016 data is sparse and September 2018 is a partial month, so both were excluded from the trend.
 
 ---
 
@@ -44,14 +67,14 @@ Real, anonymised order data from Olist covering roughly 100,000 orders placed be
 ## Repository Structure
 
 ```
-olist-sql-analysis/
+Olist-Ecommerce-SQL-Analysis/
 ├── README.md
-├── sql/
-│   ├── 01_SQL_Fundamentals.sql
-│   ├── 02_Aggregations_Filtering.sql
-│   ├── 03_Joins_Business_Analysis.sql
-│   └── 04_Advanced_Business_Analytics.sql
-└── images/            # screenshots of results and the dashboard
+├── 01_SQL_Fundamentals.sql
+├── 02_Aggregations_Filtering.sql
+├── 03_Joins_Business_Analysis.sql
+├── 04_Advanced_Business_Analytics.sql
+├── Olist_Dashboard.pbix
+└── images/
 ```
 
 | File | Queries | Topics |
@@ -60,24 +83,7 @@ olist-sql-analysis/
 | `02_Aggregations_Filtering.sql` | 9-16 | `COUNT`, `SUM`, `AVG`, `GROUP BY`, `HAVING` |
 | `03_Joins_Business_Analysis.sql` | 17-26 | Multi-table `INNER JOIN`, subqueries, revenue, ratings, payments |
 | `04_Advanced_Business_Analytics.sql` | 27-33 | Date functions, `CASE WHEN`, CTEs, delivery analysis, customer segmentation |
-
----
-
-## Key Findings
-
-> **TODO:** Run the queries, then replace each placeholder with a real result from your own output. Delete any row you can't back up with a number.
-
-| Question | Query | Finding |
-|---|---|---|
-| How does monthly revenue change? | 27 | [TODO: e.g. trend, peak month] |
-| Which categories earn the most? | 18 | [TODO: top 3 categories and their share] |
-| Which states have the slowest delivery? | 28 | [TODO: slowest states and average days] |
-| What share of orders arrive late? | 29 | [TODO: late delivery %] |
-| Do late deliveries lower review scores? | 32 | [TODO: average score late vs on time] |
-| How many customers order more than once? | 31 | [TODO: repeat customer %] |
-| Who are the most valuable customers? | 33 | [TODO: segment sizes or top spend] |
-
-**Recommendation:** [TODO: one or two sentences on what the business should do based on these findings.]
+| `Olist_Dashboard.pbix` | n/a | Power BI report file |
 
 ---
 
@@ -96,7 +102,8 @@ olist-sql-analysis/
 1. Download the dataset from [Kaggle](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
 2. Create a schema: `CREATE DATABASE olist_ecommerce;`
 3. Load the CSV files into tables with the names listed above (MySQL Workbench: **Server → Data Import**, or `LOAD DATA`).
-4. Run the files in the `sql/` folder in order, one query at a time.
+4. Run the four `.sql` files in order, one query at a time.
+5. Open `Olist_Dashboard.pbix` in Power BI Desktop (Windows) to explore the dashboard.
 
 ---
 
@@ -108,6 +115,7 @@ olist-sql-analysis/
 - Conditional logic with `CASE WHEN` for segmentation
 - Date calculations for delivery-time analysis
 - Spotting and handling data-quality issues (duplicate keys, NULLs, double counting)
+- Building an interactive Power BI dashboard on a MySQL database
 - Turning query results into business recommendations
 
 ---
@@ -121,9 +129,9 @@ olist-sql-analysis/
 
 ## About
 
-Ajith B
+**Ajith B**
 Computer Science (Data Science) Graduate
-[LinkedIn: www.linkedin.com/in/
-ajith-b-7549b2376] · [GitHub: https://github.com/zeusnub.] · [Email: ajithbalachandran911@gmail.com]
+
+[LinkedIn](https://www.linkedin.com/in/ajith-b-7549b2376) · [GitHub](https://github.com/zeusnub) · [Email](mailto:ajithbalachandran911@gmail.com)
 
 *Dataset credit: Olist and the Kaggle community. Please check the dataset's license on Kaggle before reuse.*
