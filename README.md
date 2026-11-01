@@ -42,6 +42,11 @@ Filters (such as year and state) let you slice every page interactively.
 ## Key Findings
 
 - **Revenue trend (Query 27):** monthly revenue grew from about R$ 120K in January 2017 to a peak of about R$ 1.0M in November 2017 (+52% over October), then held at roughly R$ 850K-990K a month through mid-2018. January-August 2018 revenue was about 138% higher than the same months of 2017. Early 2016 data is sparse and September 2018 is a partial month, so both were excluded from the trend.
+-  ## Recommendations
+
+1. **Cut late deliveries.** Late orders score 1.72 points lower, so Olist should work with carriers on the states with the longest delivery times (Query 28) and set more realistic delivery estimates.
+2. **Improve customer retention.** With only 3.12% of customers returning, Olist should target its high-value customers (Query 33) with follow-up offers to encourage a second purchase.
+3. **Plan for peak months.** November 2017 was the highest-revenue month, so inventory and seller capacity should be prepared ahead of peak periods.
 
 ---
 
